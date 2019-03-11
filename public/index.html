@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gify App 1</title>
+    <title>My Giphy</title>
 
-    <meta name="apple-mobile-web-app-title" content="Gify">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-title" content="My Giphy">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image" href="images/launch.png">
 
@@ -54,10 +56,15 @@
 
         <!-- Error Alert -->
         <div class="alert alert-danger text-center m-1" style="display:none;">
-            Could not update Giphy's
+            Could not update Giphy's - API call limit :( Please wait a while and refresh app.
         </div>
 
         <!-- Giphys -->
+        <blockquote id="title" class="blockquote text-center">
+            <p class="mb-0">Treanging Giphs:</p>
+            <footer class="blockquote-footer">"Good decisions don't make life easy, but they do make it easier." <cite
+                    title="Source Title">Larry Gelwix</cite></footer>
+        </blockquote>
         <div id="giphys" class="row no-gutters"></div>
 
     </main>

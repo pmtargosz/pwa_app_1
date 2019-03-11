@@ -3,11 +3,14 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: ['babel-polyfill', './src/index.js'],
+    entry: {
+        main: ['babel-polyfill', './src/index.js']
+    },
     output: {
         path: path.resolve(__dirname, 'public/js'),
-        filename: 'main.js'
+        filename: '[name].js'
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [{
             test: /\.m?js$/,
