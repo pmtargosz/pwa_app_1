@@ -41,7 +41,7 @@ import {
         latestGiphy.push(gif.images.downsized_large.url);
         return `
           <div class="col-sm-6 col-md-4 col-lg-3 p-1">
-              <img class="w-100 img-fluid" src="${gif.images.downsized_large.url}">
+              <img class="w-100 img-fluid" alt=${gif.title} src="${gif.images.downsized_large.url}">
           </div>
         `
       }).join('');
@@ -98,7 +98,7 @@ import {
     const registerSW = async () => {
       try {
         // Register the SW
-        await navigator.serviceWorker.register('/sw.js');
+        await navigator.serviceWorker.register('./sw.js');
       } catch (err) {
         console.log('Service Worker Failed to Register', err);
       }
