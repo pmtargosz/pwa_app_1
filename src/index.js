@@ -41,7 +41,7 @@ import {
         latestGiphy.push(gif.images.downsized_large.url);
         return `
           <div class="col-sm-6 col-md-4 col-lg-3 p-1">
-              <img class="w-100 img-fluid" alt=${gif.title} src="${gif.images.downsized_large.url}">
+              <img class="w-100 img-fluid" alt="${gif.title.replace('"',' ')}" src="${gif.images.downsized_large.url}">
           </div>
         `
       }).join('');
